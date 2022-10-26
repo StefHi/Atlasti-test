@@ -37,7 +37,7 @@ try {
     DownloadAtlasti -url "https://github.com/StefHi/SetDefaultBrowser/releases/latest/download/SetDefaultBrowser.exe" -downloadLocation "C:\downloads\SetDefaultBrowser.exe"
     Start-Process msiexec.exe -Wait -ArgumentList '/i C:\downloads\Atlasti_22.2.msi /qn' -Verb RunAs
     Start-process C:\downloads\MicrosoftEdgeWebview2Setup.exe -Wait -ArgumentList '/silent /install' -Verb RunAs
-    Start-process C:\downloads\SetDefaultBrowser chrome
+    Start-process C:\downloads\SetDefaultBrowser -Wait -ArgumentList 'chrome /silent' -Verb RunAs
 
 
 } catch {
